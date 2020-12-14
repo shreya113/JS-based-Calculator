@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>calculator</title>
+    
+    <script>
+        function insert(num)
+        {
+            document.form.screen.value = document.form.screen.value + num
+        }
+        function equal()
+        {
+            var exp = document.form.screen.value;
+            if(exp)
+                {
+                    document.form.screen.value = eval(exp);
+                }
+        }
+        function clean()
+        {
+            document.form.screen.value = "";
+        }
+      /*  function back()
+        {
+            var exp = document.form.screen.value;
+            document.form.screen.value = exp.substring(0,exp.lenght-1);
+        }*/
+    </script>
+    <style>
+        .calc{
+            text-align: center;
+            height: 400px;
+            width: 400px;
+            background: lightblue;
+            margin: 15px;
+            border: 1px solid #c4c4c4;
+            left: 400px;
+            top: 50px;
+            position: relative;
+            box-shadow: 5px 5px;
+            border-radius: 3px;
+        }
+        .screen{
+            background-color: white;
+            height: 70px;
+            width: 100%;
+            box-shadow: 2px 2px;
+            border-radius: 3px;
+            
+        }
+        .operator{
+            height: 50px;
+            width: 60px;
+            padding: 15px;
+            margin: 15px;
+            position: relative;
+            flex-direction: row;
+            top: 5px;
+            box-shadow: 2px 2px;
+            background-color: orange;
+        }
+         .operand{
+            height: 50px;
+            width: 60px;
+            padding: 15px;
+            margin: 15px;
+            position: relative;
+            flex-direction: row;
+            top: 5px;
+            box-shadow: 2px 2px;
+        }
+          .equal{
+            height: 50px;
+            width: 60px;
+            padding: 15px;
+            margin: 15px;
+            position: relative;
+            flex-direction: row;
+            top: 5px;
+            box-shadow: 2px 2px;
+            background-color: green;
+        }
+          .all-clear{
+            height: 50px;
+            width: 60px;
+            padding: 15px;
+            margin: 15px;
+            position: relative;
+            flex-direction: row;
+            top: 5px;
+            box-shadow: 2px 2px;
+            background-color: red;
+        }
+        
+        button:hover{
+            background-color: #eaeaea;
+        }
+      /*  #one{
+            background-image: repeating-linear-gradient(45deg,blue 7%,pink 7%)
+                
+        }
+    </style>
+    </head> 
+    
+    <body style="background-color: pink;">
+        <div class="calc">
+            <form name="form">
+    <input class="screen" name="screen">
+                </form>
+        
+        <div id="key">
+            <button type="input" class="operand" value="7" onclick="insert(7)">7</button>
+            <button type="input" class="operand" value="4" onclick="insert(8)">8</button>
+            <button type="input" class="operand" value="9"  onclick="insert(9)">9</button>
+            <button type="input" class="operator" value="/" onclick="insert('/')">/</button>
+            
+            <button type="input" class="operand" value="4" onclick="insert(4)">4</button>
+            <button type="input" class="operand" value="5" onclick="insert(5)">5</button>
+            <button type="input" class="operand" value="6" onclick="insert(6)">6</button>
+            <button type="input" class="operator" value="*" onclick="insert('*')">&times;</button>
+            
+            <button type="input" class="operand" value="1" onclick="insert(1)">1</button>
+            <button type="input" class="operand" value="2" onclick="insert(2)">2</button>
+            <button type="input" class="operand" value="3" onclick="insert(3)">3</button>
+            <button type="input" class="operator" value="-" onclick="insert('-')">-</button>
+            
+            <button type="input" class="operand" value="0" onclick="insert(0)">0</button>
+            <button type="input" class="all-clear" value="C" onclick="clean()">AC</button>
+            <button type="input" class="equal" value="=" onclick="equal()">=</button>
+            <button type="input" class="operator" value="+" onclick="insert('+')">+</button>
+        </div>
+        </div>
+    <!--    <script>
+        var button=document.getElementsByClassName("operand");
+        var display=document.getElementsByClassName("screen");
+        var operator=document.getElementsByClassName("operator");
+        var operand1=0;
+        var operand2=null;
+        var operator=null;
+        var c=[];
+        for(var i=0;i<button.length;i++)
+            {
+                button.addEventListener("click",function(){
+                    var c=eval("operand1 operator operand2");
+                    return c;
+            })
+                    document.getElementsByClassName("screen").innerHTML=c;
+            }
+        </script>
+-->
+    </body>
+</html>
